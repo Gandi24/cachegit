@@ -1,3 +1,5 @@
+import os
+
 import requests
 import requests_cache
 
@@ -16,4 +18,5 @@ def home(path):
     return jsonify(response_dict)
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0')
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port)
