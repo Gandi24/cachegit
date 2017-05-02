@@ -7,7 +7,7 @@ from flask import Flask, render_template, request, jsonify
 
 app = Flask(__name__)
 
-requests_cache.install_cache('github_cache', backend='sqlite', expire_after=60*60*24)
+requests_cache.install_cache('github_cache', backend='sqlite', expire_after=60*60*24*7)
 
 
 @app.route('/', defaults={'path': ''})
