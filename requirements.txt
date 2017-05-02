@@ -1,2 +1,2 @@
-flask
-requests-cache
+Flask==0.12.1
+requests-cache==0.4.13
